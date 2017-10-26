@@ -1,0 +1,10 @@
+Don't worry about the game folder, I'll keep working on that if I find time.
+
+problem is pretty simple, let me know if you have any questions.
+What we need is to design problem 1-5 ish. We can go backwards if we want and make it even simpler if need be.
+
+If you want to expand the project think about things it needs.
+1.) Creating a simulated database basically. Create a Grade object, be able to add it to every student in a course. Then be able to modify and so on.
+2.) Command link for accepting commands and editing
+3.) Possibly dumping a course as serialized objects and being able to reconstruct the gradebook from said file.
+

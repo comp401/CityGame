@@ -15,28 +15,23 @@ public class Main {
 
         Village v = villageList.getVillageByOwner("hello");
 
-        v.createBuilding(IBuilding.Buildings.BLACKSMITH, new Vec3(0, 0, 0));
-        v.createBuilding(IBuilding.Buildings.BLACKSMITH, new Vec3(0, 0, 0));
-        v.createBuilding(IBuilding.Buildings.BLACKSMITH, new Vec3(0, 0, 0));
-        v.createBuilding(IBuilding.Buildings.BLACKSMITH, new Vec3(0, 0, 0));
-//
-
-
+        v.createBuilding(IBuilding.Buildings.FARM, new Vec3(0, 0, 0));
+        v.createBuilding(IBuilding.Buildings.FARM, new Vec3(0, 0, 0));
+        v.createBuilding(IBuilding.Buildings.FARM, new Vec3(0, 0, 0));
+        v.createBuilding(IBuilding.Buildings.FARM, new Vec3(0, 0, 0));
+        v.createBuilding(IBuilding.Buildings.FARM, new Vec3(0, 0, 0));
 
         //v.addBuilding(new Farm(new structs.Vec3(0,0,0)))
-
-
-
 
 
         v.getSubList(IBuilding.Buildings.FARM).forEach(b -> System.out.println(b.getXpPerTurn()));
         System.out.println(v.getXpPerTurn());
 
         System.out.println("POOL VALUES:");
-        System.out.println("food:    "+ v.getProductionPool().getFood());
-        System.out.println("raw:     "+v.getProductionPool().getRawOre());
-        System.out.println("smelted: "+v.getProductionPool().getSmeltedOre());
-        System.out.println("lumber:  "+v.getProductionPool().getLumber());
+        System.out.println("food:    " + v.getProductionPool().getFood());
+        System.out.println("raw:     " + v.getProductionPool().getRawOre());
+        System.out.println("smelted: " + v.getProductionPool().getSmeltedOre());
+        System.out.println("lumber:  " + v.getProductionPool().getLumber());
         System.out.println(IBuilding.Buildings.FARM.smeltedOreReq);
 
 

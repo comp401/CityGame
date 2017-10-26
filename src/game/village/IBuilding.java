@@ -8,7 +8,7 @@ public interface IBuilding {
 
         //1 farm feeds 4
         //TODO balance so enchanter doesn't pull before miner
-        //           w  base, food,  raw,   smel, lum
+        //           w  base, food,  raw,   smel,  lum
         FORT        (0, 1),
         BARRACKS    (2, .1,    1,     0,    .5,   .5  ,  0), //.9 -> 1 from food, .5 mill, .5 blacksmith
         BLACKSMITH  (4, .1,   .5,     2,     0,   .3  ,  0), //.9 -> 2 unsmelted .5 food .3 lumber
