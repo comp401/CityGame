@@ -7,24 +7,25 @@ import java.util.Arrays;
  */
 public class Main {
     public static void main(String[] args) {
-        //switch the has prereue variables
+        Course.Courses[] requirements_401 = new Course.Courses[]{Course.Courses.COMP101, Course.Courses.COMP110};
+        Course comp401 = new CourseImpl("Foundations of Programming", 401, "kmp", requirements_401);
 
-        Course.Courses[] pre401 = new Course.Courses[]{Course.Courses.COMP101, Course.Courses.COMP110};
-        Course comp401 = new CourseImpl("Comp401", 401, "kmp", pre401);
-
-
-
-        Course.Courses[] badreqs = new Course.Courses[]{Course.Courses.COMP101};
-        Course.Courses[] goodreqs = new Course.Courses[]{Course.Courses.COMP101, Course.Courses.COMP110};
+        Course.Courses[] insufficient_requirements = new Course.Courses[]{Course.Courses.COMP101};
+        Course.Courses[] sufficient_requirements = new Course.Courses[]{Course.Courses.COMP101, Course.Courses.COMP110};
+        Course.Courses[] no_requirements = new Course.Courses[]{};
 
 
-        comp401.addStudent(new Student(1,"Chris", "Burgess", goodreqs));
-        comp401.addStudent(new Student(1,"Chris", "Arran", goodreqs));
-        comp401.addStudent(new Student(1,"Chris", "CCC", goodreqs));
-        comp401.addStudent(new Student(1,"Chris", "Don", goodreqs));
-        comp401.addStudent(new Student(1,"Chris", "Zeb", goodreqs));
-        comp401.dropStudent(new Student(1,"Chris", "Burgess", goodreqs));
+        comp401.addStudent(new Student(6548, "Michael", "Scott", insufficient_requirements));
+        comp401.addStudent(new Student(1236, "Kevin", "Malone", insufficient_requirements));
 
+        comp401.addStudent(new Student(6489, "Jim", "Halpert", sufficient_requirements));
+        comp401.addStudent(new Student(6942, "Andy", "Bernard", sufficient_requirements));
+        comp401.addStudent(new Student(8434, "Oscar", "Martinez", sufficient_requirements));
+        comp401.addStudent(new Student(3237, "Pam", "Beasley", sufficient_requirements));
+
+        comp401.addStudent(new Student(7845, "Toby", "Flenderson", no_requirements));
+
+        //students who do not meet all requirements will not be accepted to the course
         System.out.println(comp401.getRoster());
 
     }

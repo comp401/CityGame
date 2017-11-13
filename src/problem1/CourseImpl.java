@@ -79,7 +79,7 @@ public class CourseImpl implements Course {
     }
 
     private boolean hasPreRequisites(Student student) {
-        return Arrays.asList(student.getCompletedCourses()).containsAll(Arrays.asList(preReqs));
+        return Arrays.asList(preReqs).containsAll(Arrays.asList(student.getCompletedCourses()));
     }
 }
 
